@@ -7,7 +7,7 @@ namespace APPConsultasHansOrtiz.Views;
 public partial class HOCreatePage : ContentPage
 {
     private readonly HttpClient _httpClient;
-    private const string API_URL = "https://localhost:7019"; // Reemplaza con tu URL de API
+    private const string API_URL = "https://localhost:7019"; 
 
     public HOCreatePage()
     {
@@ -42,7 +42,7 @@ public partial class HOCreatePage : ContentPage
 
             if (response.IsSuccessStatusCode)
             {
-                await DisplayAlert("Éxito", "Contacto creado correctamente", "OK");
+                await DisplayAlert("Ã‰xito", "Contacto creado correctamente", "OK");
                 await Navigation.PopAsync();
             }
             else
@@ -78,7 +78,7 @@ public partial class HOCreatePage : ContentPage
 
         if (string.IsNullOrWhiteSpace(EntryPhone.Text))
         {
-            DisplayAlert("Error", "El teléfono es requerido", "OK");
+            DisplayAlert("Error", "El telÃ©fono es requerido", "OK");
             return false;
         }
 
