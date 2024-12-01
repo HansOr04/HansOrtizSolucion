@@ -7,7 +7,7 @@ namespace APPConsultasHansOrtiz.Views;
 public partial class HOEditPage : ContentPage
 {
     private readonly HttpClient _httpClient;
-    private const string API_URL = "https://localhost:7019"; // Reemplaza con tu URL de API
+    private const string API_URL = "https://localhost:7019"; 
     private int _contactId;
 
     public HOEditPage(HO_Contacto contacto)
@@ -57,7 +57,7 @@ public partial class HOEditPage : ContentPage
 
             if (response.IsSuccessStatusCode)
             {
-                await DisplayAlert("Éxito", "Contacto actualizado correctamente", "OK");
+                await DisplayAlert("Ã‰xito", "Contacto actualizado correctamente", "OK");
                 await Navigation.PopAsync();
             }
             else
@@ -93,7 +93,7 @@ public partial class HOEditPage : ContentPage
 
         if (string.IsNullOrWhiteSpace(EntryPhone.Text))
         {
-            DisplayAlert("Error", "El teléfono es requerido", "OK");
+            DisplayAlert("Error", "El telÃ©fono es requerido", "OK");
             return false;
         }
 
