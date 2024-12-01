@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APPConsultasHansOrtiz.Views.HODetailPage"
+             Title="Detalles del Contacto">
+
+    <ScrollView>
+        <Grid Padding="20" RowSpacing="10" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+            <Frame Grid.Row="0" Margin="0,0,0,20" BorderColor="Gray" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="ID:" FontSize="Medium" FontAttributes="Bold"/>
+                    <Label x:Name="LabelId" FontSize="Medium" Margin="0,5,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Grid.Row="1" BorderColor="Gray" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="Nombre:" FontSize="Medium" FontAttributes="Bold"/>
+                    <Label x:Name="LabelFirstName" FontSize="Medium" Margin="0,5,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Grid.Row="2" BorderColor="Gray" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="Apellido:" FontSize="Medium" FontAttributes="Bold"/>
+                    <Label x:Name="LabelLastName" FontSize="Medium" Margin="0,5,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Grid.Row="3" BorderColor="Gray" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="Teléfono:" FontSize="Medium" FontAttributes="Bold"/>
+                    <Label x:Name="LabelPhone" FontSize="Medium" Margin="0,5,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Grid.Row="4" BorderColor="Gray" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="Email:" FontSize="Medium" FontAttributes="Bold"/>
+                    <Label x:Name="LabelEmail" FontSize="Medium" Margin="0,5,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <HorizontalStackLayout Grid.Row="5" Spacing="10" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Button 
+                    x:Name="BtnEdit"
+                    Text="Editar"
+                    Clicked="OnEditClicked"
+                    WidthRequest="150"/>
+
+                <Button 
+                    x:Name="BtnDelete"
+                    Text="Eliminar"
+                    BackgroundColor="Red"
+                    Clicked="OnDeleteClicked"
+                    WidthRequest="150"/>
+            </HorizontalStackLayout>
+
+            <ActivityIndicator 
+                x:Name="LoadingIndicator"
+                Grid.Row="6"
+                IsRunning="False"
+                IsVisible="False"
+                HorizontalOptions="Center"/>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

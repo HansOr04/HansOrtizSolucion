@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APPConsultasHansOrtiz.Views.HOCreatePage"
+             Title="Crear Nuevo Contacto">
+    <ScrollView>
+        <Grid RowSpacing="10" 
+              Padding="20" 
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+            <Label 
+                Text="Nombre:"
+                Grid.Row="0"
+                FontSize="Medium"/>
+            <Entry 
+                x:Name="EntryFirstName"
+                Grid.Row="1"
+                Placeholder="Ingrese el nombre"
+                FontSize="Medium"/>
+
+            <Label 
+                Text="Apellido:"
+                Grid.Row="2"
+                FontSize="Medium"/>
+            <Entry 
+                x:Name="EntryLastName"
+                Grid.Row="3"
+                Placeholder="Ingrese el apellido"
+                FontSize="Medium"/>
+
+            <Label 
+                Text="Teléfono:"
+                Grid.Row="4"
+                FontSize="Medium"/>
+            <Entry 
+                x:Name="EntryPhone"
+                Grid.Row="5"
+                Placeholder="Ingrese el teléfono"
+                Keyboard="Telephone"
+                FontSize="Medium"/>
+
+            <Label 
+                Text="Email:"
+                Grid.Row="6"
+                FontSize="Medium"/>
+            <Entry 
+                x:Name="EntryEmail"
+                Grid.Row="7"
+                Placeholder="Ingrese el email"
+                Keyboard="Email"
+                FontSize="Medium"/>
+
+            <Button 
+                x:Name="BtnSave"
+                Text="Guardar Contacto"
+                Grid.Row="8"
+                Margin="0,20,0,0"
+                Clicked="OnSaveClicked"/>
+
+            <ActivityIndicator 
+                x:Name="LoadingIndicator"
+                Grid.Row="9"
+                IsRunning="False"
+                IsVisible="False"
+                HorizontalOptions="Center"/>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

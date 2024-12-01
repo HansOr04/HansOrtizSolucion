@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using APPConsultasHansOrtiz.Services;
 
 namespace APPConsultasHansOrtiz
 {
@@ -15,9 +15,14 @@ namespace APPConsultasHansOrtiz
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-#if DEBUG
-    		builder.Logging.AddDebug();
-#endif
+            // Registrar servicios
+            builder.Services.AddSingleton<ApiService>();
+
+            // Registrar páginas
+            builder.Services.AddTransient<Views.HOListPage>();
+            builder.Services.AddTransient<Views.HOCreatePage>();
+            builder.Services.AddTransient<Views.HODetailPage>();
+            builder.Services.AddTransient<Views.HOEditPage>();
 
             return builder.Build();
         }
